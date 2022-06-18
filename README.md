@@ -1,1 +1,4 @@
-# Sistema a ser desenvolvido para trabalho final da máteria de Progrãmação Web
+# Projeto - Contabilidade 
+
+Projeto sendo desenvolvido para trabalho final da máteria de Programação Web.
+
