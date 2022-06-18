@@ -1,15 +1,51 @@
-<form action="cadastro" method="post">
+<form action="cadastro" method="post" class="dados_empresa" id="cadastro">
 
     <div class="formulario">
         <label for="razao">Razao Social</label>
-        <input type="text" name="razao">
+        <input type="text" name="razao" class="input" placeholder="Razão Social">
     </div>
 
-   <div class="formulario">
+    <div class="formulario">
+        <label for="cnpj">CNPJ</label>
+        <input type="text" name="cnpj" class="input" placeholder="CNPJ">
+    </div>
+
+    <div class="formulario">
         <label for="capital">Capital Social</label>
-        <input type="text" name="capital">
+        <input type="text" name="capital" class="input" placeholder="Capital Social">
     </div>
 
-    <button type="submit">Enviar</button>
+    <div class="formulario">
+        <label for="email">Email</label>
+        <input type="text" name="email" class="input" placeholder="Email">
+    </div>
 
+    <div class="formulario">
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" class="input" placeholder="Telefone">
+    </div>
+
+    <div class="formulario">
+        <label for="nome">Responsável da Empresa</label>
+        <input type="text" name="nome" class="input" placeholder="Responsável da Empresa">
+    </div>
+
+    <div class="formulario">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" class="input" placeholder="Senha" id="senha" onblur="validartamanhosenha();">
+        <span>deve conter 8 dígitos ou mais*</span>
+     </div>
+
+    <div class="formulario">
+        <label for="Confirmar senha">Confirmar Senha</label>
+        <input type="password" name="confirmarsenha" class="input" placeholder="Insira a senha novamente" id="confirmarsenha" onblur="VerificarSenhas();">
+    </div>
+
+    <button type="submit" class="enviar" id="dados_empresa" onclick="feedback();">Enviar</button>
 </form>
+
+
+    <div class="bem_vindo">
+        <h2>Bem vindo!</h2>
+        <img src="img/bemvindo.svg" alt="">
+    </div>

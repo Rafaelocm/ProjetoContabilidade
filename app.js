@@ -25,7 +25,11 @@ app.get('/contrate', function(request, response){
 
 app.get('/sistema', function(request, response){
     response.render('sistema');
-})
+});
+
+app.get('/login', function(request, response){
+    response.render('login');
+});
 
 app.get('/cadastro', function(request, response){
     response.render('cadastro');
@@ -35,17 +39,26 @@ app.post('/cadastro', function(request, response){
     
     razao = request.body.razao; 
     capital = request.body.capital; 
+    email = request.body.email; 
+    telefone = request.body.telefone; 
+    nome = request.body.nome; 
 
     console.log("razao: " + razao);
     console.log("capital: " + capital);
+    console.log("email: " + email);
+    console.log("telefone: " + telefone);
+    console.log("nome: " + nome);
 
     cliente = {
         "razao": razao, 
         "capital": capital,
+        "email": email, 
+        "telefone": telefone,
+        "nome": nome,
     }
 
     clientes.push(cliente);
-    response.render('sistema', {clientes})
+    response.redirect('/');
 
 })
 

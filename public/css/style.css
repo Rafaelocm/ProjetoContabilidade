@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 
+
 ul {
     list-style: none;
 }
@@ -49,15 +50,7 @@ header .ul {
     width: 100%;
 }
 
-
-.logo_empresa {
-    margin: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo_empresa .titulo {
+.titulo a {
     margin-left: 15px;
     width: 300px;
     font-size: 20px;
@@ -284,16 +277,16 @@ header .ul {
     margin-bottom: 58px;
 }
 
-.planos{
-    width: 100% ;
+.planos {
+    width: 100%;
     display: flex;
-    margin-top: 25%;
+    margin-top: 15%;
     justify-content: space-between;
     align-items: center;
     height: 180px;
 }
 
-.planos .plano{
+.planos .plano {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,50 +294,43 @@ header .ul {
     border: solid rgb(138, 132, 132);
     border-radius: 3px;
     width: 500px;
-    height: 85vh;
+    height: 75vh;
 }
 
-.plano h3{
+.plano h3 {
     margin-top: 10px;
     flex-direction: column;
     font-size: 20px;
 }
 
-.plano span{
+.plano span {
     margin-top: 10px;
     font-size: 13px;
     color: rgb(59, 57, 57);
 }
 
-.plano p{
+.plano p {
     margin-top: 5px;
     color: rgb(18, 18, 129);
     font-weight: bolder;
     font-size: 30px;
 }
 
-.plano ul{
-    display: flex; 
+.plano ul {
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
 }
 
-.plano li{
+.plano li {
     display: flex;
-    margin-top: 47px;
+    margin-top: 35px;
 }
 
-.plano .lucro{
-    color: black;
-    display: flex;
-    margin-top: 13px;
-    font-size: 13px;
-}
-
-.plano .contratar{
+.plano .contratar {
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 38px;
     align-items: center;
     line-height: 24px;
     width: 100px;
@@ -353,7 +339,135 @@ header .ul {
     font-size: 18px;
     color: #fff;
     background-color: rgb(111, 111, 235);
-    margin-bottom: 30px;
+}
+
+.dados_empresa {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.dados_empresa .formulario {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 230px;
+}
+
+.formulario .input {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.formulario span{
+    font-size: 10px;
+    margin-top: 3px;
+    color: red;
+
+}
+
+.formulario label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.dados_empresa .enviar {
+    display: flex;
+    width: 15%;
+    height: 30px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 370px;
+    justify-content: center;
+}
+
+.bem_vindo {
+    width: 30%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.bem_vindo h2 {
+    font-size: 25px;
+    margin-left: 100px;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.bem_vindo img {
+    margin-top: 50px;
+}
+
+.pagina_login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar {
+    margin-top: 80px;
+    width: 410px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 19px;
+    background: #d2d0d0;
+    box-shadow:  35px 35px 70px #dbdbdb,
+             -35px -35px 70px #dcdbdb;
+}
+
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.entrar h3{
+    align-items: center;
+    font-size: 24px;
+    font: 200;
+}
+
+.formulario label{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.formulario .logar{
+    border-radius: 4px;
+    border: solid rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.enviar1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
 }
 
 
@@ -376,15 +490,9 @@ header .ul {
         align-items: center;
     }
 
-    .logo_empresa {
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
-
     .logo_empresa .titulo {
         align-items: center;
-        margin-left: 85%;
+        margin-left: 70%;
         width: 300px;
         font-size: 20px;
         color: white;
@@ -500,7 +608,7 @@ header .ul {
         width: 100%;
     }
 
-    .planos{
+    .planos {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -510,55 +618,169 @@ header .ul {
         height: 130px;
     }
 
+
+    .plano .contratar {
+        flex-direction: column;
+        margin-top: 15px;
+        align-items: center;
+        line-height: 24px;
+        width: 100px;
+        height: 30px;
+        border-radius: 3px;
+        font-size: 18px;
+        color: #fff;
+        background-color: rgb(111, 111, 235);
+        margin-bottom: 10px;
+    }
+
+
+    .plano ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .plano li {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .planos .plano {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+        border: solid rgb(138, 132, 132);
+        border-radius: 3px;
+        width: 60%;
+        height: 85vh;
+    }
+
+
+    .dados_empresa {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 75%;
+        margin-top: 50px;
+    }
+
+    .dados_empresa .formulario {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 15px;
+        margin-left: 40px;
+    }
+
+    .formulario .input {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .dados_empresa .enviar {
+        display: flex;
+        width: 15%;
+        height: 30px;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 128px;
+        justify-content: center;
+    }
+
+    .bem_vindo {
+        width: 23%;
+        height: 80vh;
+        margin-right: 35px;
+        justify-content: center;
+    }
+
+    .bem_vindo h2 {
+        font-size: 19px;
+        margin-left: 0;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .bem_vindo img {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+
     
-.plano .contratar{
+.pagina_login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entrar {
+    margin-top: 80px;
+    width: 380px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 19px;
+    background: #d2d0d0;
+    box-shadow:  35px 35px 70px #dbdbdb,
+             -35px -35px 70px #dcdbdb;
+}
+
+
+
+.formulario {
+    display: flex;
     flex-direction: column;
     margin-top: 15px;
+}
+
+.entrar h3{
     align-items: center;
-    line-height: 24px;
+    font-size: 24px;
+    font: 200;
+}
+
+.formulario label{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.formulario .logar{
+    border-radius: 4px;
+    border: solid rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.enviar1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
     width: 100px;
     height: 30px;
-    border-radius: 3px;
-    font-size: 18px;
-    color: #fff;
-    background-color: rgb(111, 111, 235);
-    margin-bottom: 10px;
-}
-
-
-.plano ul{
-    display: flex; 
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.plano li{
-    display: flex;
-    margin-top: 20px;
-}
-
-.plano .lucro{
-    color: black;
-    display: flex;
-    margin-top: 13px;
-    font-size: 13px;
-}
-
-.planos .plano{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px;
-    border: solid rgb(138, 132, 132);
-    border-radius: 3px;
-    width: 80%;
-    height: 85vh;
+    margin-top: 35px;
 }
 
 }
 
-@media (max-width: 720){
+
+
+@media (max-width: 720) {
 
     header {
         width: 100%;
@@ -570,7 +792,7 @@ header .ul {
     }
 
     header .ul {
-        width:20%;
+        width: 20%;
         display: flex;
         justify-content: flex-start;
         margin-top: 70px;
