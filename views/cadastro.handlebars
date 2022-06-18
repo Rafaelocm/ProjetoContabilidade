@@ -32,13 +32,13 @@
 
     <div class="formulario">
         <label for="senha">Senha</label>
-        <input type="password" name="senha" class="input" placeholder="Senha" id="senha" onblur="validartamanhosenha();">
+        <input type="password" name="senha" class="input" placeholder="Senha" id="senha">
         <span>deve conter 8 dígitos ou mais*</span>
      </div>
 
     <div class="formulario">
         <label for="Confirmar senha">Confirmar Senha</label>
-        <input type="password" name="confirmarsenha" class="input" placeholder="Insira a senha novamente" id="confirmarsenha" onblur="VerificarSenhas();">
+        <input type="password" name="confirmarsenha" class="input" placeholder="Insira a senha novamente" id="confirmarsenha" onblur="validarsenha();">
     </div>
 
     <button type="submit" class="enviar" id="dados_empresa" onclick="feedback();">Enviar</button>

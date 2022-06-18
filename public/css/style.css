@@ -470,7 +470,48 @@ header .ul {
     margin-top: 20px;
 }
 
+.sistema{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.grid_sistema{
+   border:solid black;
+   border-radius: 10px;
+    display: flex;
+    width: 23%;
+    flex-direction: column;
+    margin-top: 60px;
+    justify-content: space-evenly;
+}
+
+.grid_sistema .grid1{
+    width: 120px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.grid_sistema p{
+    font-size: 16px;
+    font: 200;
+}
+
+.sistema h3{
+    font-size: 18px;
+    font: 100;
+
+}
+
+.aceitar{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    align-items: center;
+    margin-left: 100px;
+    width: 100px;
+}
 
 @media(max-width: 1024px) {
     header {
@@ -774,6 +815,45 @@ header .ul {
     width: 100px;
     height: 30px;
     margin-top: 35px;
+}
+
+.sistema{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grid_sistema{
+   border:solid black;
+   border-radius: 10px;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin-top: 45px;
+    justify-content: space-evenly;
+}
+
+.grid_sistema .grid1{
+    width: 120px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.grid_sistema p{
+    font-size: 16px;
+    font: 200;
+}
+
+
+.aceitar{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    align-items: center;
+    margin-left: 73px;
+    width: 100px;
 }
 
 }

@@ -15,16 +15,13 @@ app.use(bp.json());
 
 app.use(express.static('public'));
 
+
 app.get('/', function(request, response){
     response.render('inicial');
 });
 
 app.get('/contrate', function(request, response){
     response.render('contrate');
-});
-
-app.get('/sistema', function(request, response){
-    response.render('sistema');
 });
 
 app.get('/login', function(request, response){
@@ -42,7 +39,7 @@ app.post('/cadastro', function(request, response){
     email = request.body.email; 
     telefone = request.body.telefone; 
     nome = request.body.nome; 
-
+    senha = request.body.senha; 
     console.log("razao: " + razao);
     console.log("capital: " + capital);
     console.log("email: " + email);
@@ -59,7 +56,12 @@ app.post('/cadastro', function(request, response){
 
     clientes.push(cliente);
     response.redirect('/');
+    
+});
 
-})
+app.get('/sistema', function(request, response){
+    response.render('sistema', {clientes});
+});
+
 
 app.listen(3000);
