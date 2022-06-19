@@ -15,6 +15,25 @@ app.use(bp.json());
 
 app.use(express.static('public'));
 
+var mysql = require ('mysql2');
+
+var mysqlConnection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    database: 'empresa'
+});
+
+
+app.get('/sobre', function(request, response){
+    sql = 'SELECT * FROM cliente'
+    mysqlConnection.query(sql, function (err, resultSet, fields){
+        if(err){
+            console.log("Erro ao conectar-se com o banco de dados: ", err);
+        }else{
+            response.render ('sobre', {cliente: resultSet});
+        }
+    })
+})
 
 app.get('/', function(request, response){
     response.render('inicial');
@@ -36,29 +55,33 @@ app.post('/cadastro', function(request, response){
     
     razao = request.body.razao; 
     capital = request.body.capital; 
-    email = request.body.email; 
-    telefone = request.body.telefone; 
-    nome = request.body.nome; 
-    senha = request.body.senha; 
+    responsavel = request.body.responsavel; 
+    cnpj = request.body.cnpj; 
+
     console.log("razao: " + razao);
     console.log("capital: " + capital);
-    console.log("email: " + email);
-    console.log("telefone: " + telefone);
-    console.log("nome: " + nome);
+    console.log("responsavel: " + responsavel);
+    console.log("cnpj: " + cnpj)
 
     cliente = {
         "razao": razao, 
+        "cnpj": cnpj, 
         "capital": capital,
-        "email": email, 
-        "telefone": telefone,
-        "nome": nome,
+        "nome": responsavel
     }
 
-    clientes.push(cliente);
-    response.redirect('/');
-    
-});
+    values = [[razao, cnpj, responsavel, capital]];
 
+    clientes.push(cliente);
+
+    sql = 'INSERT INTO cliente (razao, cnpj, responsavel, capital) VALUES ?'
+    mysqlConnection.query(sql, [values], function (err, result){
+        if (err) throw err;
+        console.log("Linhas modificadas no banco: ", result.affectedRows) ;
+    })
+    response.redirect('/');
+});
+    
 app.get('/sistema', function(request, response){
     response.render('sistema', {clientes});
 });

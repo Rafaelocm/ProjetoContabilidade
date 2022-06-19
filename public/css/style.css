@@ -431,8 +431,6 @@ header .ul {
              -35px -35px 70px #dcdbdb;
 }
 
-
-
 .formulario {
     display: flex;
     flex-direction: column;
@@ -470,6 +468,7 @@ header .ul {
     margin-top: 20px;
 }
 
+
 .sistema{
     display: flex;
     width: 100%;
@@ -484,7 +483,6 @@ header .ul {
     width: 23%;
     flex-direction: column;
     margin-top: 60px;
-    justify-content: space-evenly;
 }
 
 .grid_sistema .grid1{
