@@ -24,13 +24,13 @@ var mysqlConnection = mysql.createConnection({
 });
 
 
-app.get('/sobre', function(request, response){
+app.get('/sistema', function(request, response){
     sql = 'SELECT * FROM cliente'
     mysqlConnection.query(sql, function (err, resultSet, fields){
         if(err){
             console.log("Erro ao conectar-se com o banco de dados: ", err);
         }else{
-            response.render ('sobre', {cliente: resultSet});
+            response.render ('sistema', {cliente: resultSet});
         }
     })
 })
@@ -57,24 +57,30 @@ app.post('/cadastro', function(request, response){
     capital = request.body.capital; 
     responsavel = request.body.responsavel; 
     cnpj = request.body.cnpj; 
+    telefone = request.body.telefone; 
+    email = request.body.email; 
 
     console.log("razao: " + razao);
     console.log("capital: " + capital);
     console.log("responsavel: " + responsavel);
-    console.log("cnpj: " + cnpj)
+    console.log("cnpj: " + cnpj);
+    console.log("telefone: " + telefone);
+    console.log("email: " + email);
 
     cliente = {
         "razao": razao, 
         "cnpj": cnpj, 
         "capital": capital,
-        "nome": responsavel
+        "nome": responsavel,
+        "telefone": telefone, 
+        "email": email
     }
 
-    values = [[razao, cnpj, responsavel, capital]];
+    values = [[razao, cnpj, responsavel, capital, telefone, email]];
 
     clientes.push(cliente);
 
-    sql = 'INSERT INTO cliente (razao, cnpj, responsavel, capital) VALUES ?'
+    sql = 'INSERT INTO cliente (razao, cnpj, responsavel, capital, email, telefone) VALUES ?'
     mysqlConnection.query(sql, [values], function (err, result){
         if (err) throw err;
         console.log("Linhas modificadas no banco: ", result.affectedRows) ;
@@ -82,9 +88,7 @@ app.post('/cadastro', function(request, response){
     response.redirect('/');
 });
     
-app.get('/sistema', function(request, response){
-    response.render('sistema', {clientes});
-});
+
 
 
 app.listen(3000);
