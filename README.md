@@ -5,7 +5,7 @@ Projeto sobre contabilidade desenvolvido pela equipe para apresentação final d
 Membros do projeto: 
 
 @pauloocm
-@gabriel 
+@jadeerson
 @batiistta
 @marciomagalhaes 
 
