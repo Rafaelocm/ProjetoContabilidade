@@ -1,4 +1,11 @@
-# Projeto - Contabilidade 
+#Projeto final da matéria Programação Web!
 
-Projeto sendo desenvolvido para trabalho final da máteria de Programação Web.
+Projeto desenvolvido pela equipe para apresentação final da matéria de Programação Web. 
+
+Membros do projeto: 
+
+@pauloocm
+@gabriel 
+@jadeerson 
+@marciomagalhaes 
 
