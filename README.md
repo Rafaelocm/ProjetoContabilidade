@@ -6,6 +6,6 @@ Membros do projeto:
 
 @pauloocm
 @gabriel 
-@jadeerson 
+@batiistta
 @marciomagalhaes 
 
