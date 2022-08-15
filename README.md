@@ -1,6 +1,6 @@
-#Projeto final da matéria Programação Web!
+Projeto final da matéria Programação Web!
 
-Projeto desenvolvido pela equipe para apresentação final da matéria de Programação Web. 
+Projeto sobre contabilidade desenvolvido pela equipe para apresentação final da matéria de Programação Web 🧑‍💻📈. 
 
 Membros do projeto: 
 
